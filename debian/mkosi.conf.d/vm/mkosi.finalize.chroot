@@ -2,8 +2,8 @@
 
 TARGET="$ARCHITECTURE"
 
-if [ "$TARGET" = 'x86_64' ]; then
-    :
+if [ "$TARGET" = 'x86-64' ]; then
+    TARGET='x86_64'
 elif (printf '%s' "$TARGET" | grep -Exq 'i.86'); then
     TARGET='i386'
 elif [ "$TARGET" = 'aarch64' ] || [ "$TARGET" = 'arm64' ]; then
