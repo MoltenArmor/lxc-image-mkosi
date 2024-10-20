@@ -1,0 +1,5 @@
+#!/bin/sh -ue
+
+cat /etc/resolv.conf > /tmp/resolv.conf
+umount -l /etc/resolv.conf || true
+mv /tmp/resolv.conf /etc/

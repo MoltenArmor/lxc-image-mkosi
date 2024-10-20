@@ -1,0 +1,3 @@
+mask systemd-networkd.service
+mask systemd-networkd.socket
+mask systemd-networkd-wait-online.service
