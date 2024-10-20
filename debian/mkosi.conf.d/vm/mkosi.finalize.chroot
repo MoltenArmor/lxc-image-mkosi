@@ -1,6 +1,7 @@
 #!/bin/sh -ue
 
-TARGET="$(uname -m)"
+TARGET="$ARCHITECTURE"
+
 if [ "$TARGET" = 'x86_64' ]; then
     :
 elif (printf '%s' "$TARGET" | grep -Exq 'i.86'); then
