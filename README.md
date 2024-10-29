@@ -1,6 +1,6 @@
 # lxc-image-mkosi
 
-Build LXC images with mkosi.
+Build LXC container or VM images for LXD/Incus with mkosi.
 
 If you want to start building, run:
 
