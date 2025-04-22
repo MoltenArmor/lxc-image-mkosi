@@ -4,10 +4,5 @@ printf '%s\n' 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 update-locale LANG=en_US.UTF-8
 
-# Cleanup underlying /run
-mount -o bind / /mnt
-rm -rf /mnt/run/*
-umount /mnt
-
 # Cleanup temporary shadow paths
 rm /etc/*-
