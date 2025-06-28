@@ -1,0 +1,13 @@
+#!/bin/sh
+set -uex
+
+mkdir -p /selinux && \
+touch /selinux/enforce
+
+sed -i '/^session.*pam_loginuid.so/s/^session/# session/' /etc/pam.d/*
+
+localedef -i en_US -f UTF-8 en_US.UTF-8
+printf '%s\n' 'LANG=en_US.utf8' > /etc/locale.conf
+
+# Cleanup temporary shadow paths
+rm /etc/*-
