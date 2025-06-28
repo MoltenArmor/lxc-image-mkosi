@@ -1,0 +1,4 @@
+APT::Install-Suggests "0";
+APT::Install-Recommends "0";
+APT::AutoRemove::SuggestsImportant "false";
+APT::AutoRemove::RecommendsImportant "false";

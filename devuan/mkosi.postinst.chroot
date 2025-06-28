@@ -1,0 +1,15 @@
+#!/bin/sh
+set -uex
+
+[ ! -e "/etc/inittab" ] && cp /usr/share/sysvinit/inittab /etc/inittab
+
+sed -i "s#^pf::powerwait.*#pf::powerwait:/sbin/poweroff#" /etc/inittab
+
+sed -i '/tty[1-6]/s/^/#/' /etc/inittab
+
+printf '%s\n' 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
+locale-gen
+update-locale LANG=en_US.UTF-8
+
+# Cleanup temporary shadow paths
+rm /etc/*-
