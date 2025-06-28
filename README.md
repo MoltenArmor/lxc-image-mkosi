@@ -2,6 +2,8 @@
 
 Build LXC or VM images for LXD/Incus with mkosi.
 
+You can also use these images for `systemd-nspawn` or `systemd-vmspawn`.
+
 If you want to start building, run:
 
 ```
