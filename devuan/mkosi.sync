@@ -1,0 +1,7 @@
+#!/bin/sh
+set -ue
+
+if ! [ -f initrd/image.cpio.zst ]; then
+    printf '%s\n' "Please build initrd first."
+    exit 1
+fi
