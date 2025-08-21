@@ -1,0 +1,4 @@
+#!/bin/bash
+set -ue
+
+sed -i '/tty[1-6]/s/^/#/' /etc/inittab

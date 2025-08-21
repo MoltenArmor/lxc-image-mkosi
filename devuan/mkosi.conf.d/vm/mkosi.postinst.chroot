@@ -1,0 +1,4 @@
+#!/bin/bash
+set -ue
+
+sed -i '/^#[0-9]:[0-9]*:respawn:/s/^#//' /etc/inittab
